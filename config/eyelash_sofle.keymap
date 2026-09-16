@@ -93,45 +93,45 @@
             >;
 
             sensor-bindings = <&rsr_vol &rsr_trans>;
-            display-name = "LAYER0";
+            display-name = "BASE";
         };
 
         layer_1 {
             bindings = <
-&kp GRAVE   &kp F1           &kp F2          &kp F3           &kp F4           &kp F5             &mmv MOVE_UP     &kp F6           &kp F7           &kp F8      &kp F9     &kp F10           &trans
-&trans      &kp GRAVE        &mkp LCLK       &mkp MCLK        &mkp RCLK        &mkp MB4           &mmv MOVE_DOWN   &kp PG_UP        &kp END          &kp UP      &kp HOME   &kp MINUS         &kp EQUAL
-&trans      &kp TILDE        &trans          &trans           &trans           &mkp MB5           &mmv MOVE_LEFT   &kp PG_DN        &kp LEFT         &kp DOWN    &kp RIGHT  &kp LEFT_BRACKET  &kp RIGHT_BRACKET
-&trans      &rgb_ug RGB_OFF  &rgb_ug RGB_ON  &rgb_ug RGB_EFF  &rgb_ug RGB_EFR  &rgb_ug RGB_SPI    &mmv MOVE_RIGHT  &rgb_ug RGB_BRI  &rgb_ug RGB_BRD  &kp INSERT  &kp F11    &kp F12           &trans
-&kp C_MUTE  &trans           &trans          &trans           &trans           &trans             &mkp LCLK        &trans           &trans           &trans      &trans     &trans
+&kp GRAVE  &kp F1     &kp F2     &kp F3     &kp F4     &kp F5     &mmv MOVE_UP     &kp FSLH   &kp N7  &kp N8     &kp N9     &kp MINUS          &kp BACKSPACE
+&trans     &kp LCTRL  &kp LSHFT  &kp LALT   &kp DELETE &kp ESC    &mmv MOVE_DOWN   &kp STAR   &kp N4  &kp N5     &kp N6     &kp PLUS           &kp EQUAL
+&trans     &kp HOME   &kp UP     &kp END    &kp PG_UP  &kp INS    &mmv MOVE_LEFT   &kp DOT    &kp N1  &kp N2     &kp N3     &kp LEFT_BRACKET   &kp RIGHT_BRACKET
+&trans     &kp PG_DN  &kp LEFT   &kp DOWN   &kp RIGHT  &kp F6     &mmv MOVE_RIGHT  &kp N0     &kp N0  &kp COMMA  &kp DOT    &kp F11            &kp F12
+&kp C_MUTE &trans     &trans     &trans     &trans     &trans     &mkp LCLK        &trans     &trans  &trans     &trans     &trans
             >;
 
             sensor-bindings = <&rsr_vol &rsr_trans>;
-            display-name = "LAYER1";
+            display-name = "EXCEL";
         };
 
         layer_2 {
             bindings = <
-&kp TILDE  &bt BT_SEL 0  &bt BT_SEL 1    &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &mmv MOVE_UP     &kp F6  &kp F7  &kp F8      &kp F9     &kp F10      &trans
-&trans     &bt BT_CLR    &bt BT_CLR_ALL  &trans        &trans        &trans          &mmv MOVE_DOWN   &trans  &trans  &kp F11     &kp F12    &kp UNDER    &kp PLUS
-&trans     &out OUT_USB  &out OUT_BLE    &trans        &trans        &trans          &mmv MOVE_LEFT   &trans  &trans  &trans      &trans     &kp LBRC     &kp RBRC
-&trans     &sys_reset    &trans          &bootloader   &trans        &trans          &mmv MOVE_RIGHT  &trans  &trans  &sys_reset  &soft_off  &bootloader  &trans
-&trans     &trans        &trans          &trans        &trans        &trans          &mkp LCLK        &trans  &trans  &trans      &trans     &trans
+&kp TILDE  &kp F13    &kp F14   &kp F15   &kp F16   &kp F17     &mmv MOVE_UP     &kp F18  &kp F19  &kp F20    &kp F21    &kp F22    &kp BACKSPACE
+&trans     &kp LBRC   &kp RBRC  &kp LPAR  &kp RPAR  &kp BSLH    &mmv MOVE_DOWN   &kp F23  &kp F24  &kp SEMI   &kp COLON  &kp UNDER  &kp PLUS
+&trans     &kp COMMA  &kp DOT   &kp MINUS &kp EQUAL &kp FSLH    &mmv MOVE_LEFT   &trans   &trans   &trans     &trans     &kp LBRC   &kp RBRC
+&trans     &kp DQT    &kp SQT   &kp GRAVE &kp TILDE &kp PRCNT   &mmv MOVE_RIGHT  &trans   &trans   &trans     &trans     &trans     &trans
+&mo 3      &trans     &trans    &trans    &trans    &trans      &mkp LCLK        &trans   &trans   &trans     &trans     &trans
             >;
 
-            display-name = "LAYER2";
+            display-name = "SYMBOL";
             sensor-bindings = <&rsr_vol &rsr_trans>;
         };
 
         layer_3 {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&kp TILDE  &bt BT_SEL 0  &bt BT_SEL 1    &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &mmv MOVE_UP     &kp F1     &kp F2    &kp F3      &kp F4      &kp F5      &kp F6
+&trans     &bt BT_CLR    &bt BT_CLR_ALL  &out OUT_USB  &out OUT_BLE  &trans          &mmv MOVE_DOWN   &mkp LCLK  &mkp MCLK &mkp RCLK   &mkp MB4    &mkp MB5    &trans
+&trans     &rgb_ug RGB_OFF &rgb_ug RGB_ON &rgb_ug RGB_EFF &rgb_ug RGB_EFR &rgb_ug RGB_SPI &mmv MOVE_LEFT &rgb_ug RGB_BRI &rgb_ug RGB_BRD &kp INSERT &kp F11 &kp F12 &trans
+&trans     &sys_reset    &trans          &bootloader   &trans        &trans          &mmv MOVE_RIGHT  &trans     &trans    &sys_reset  &soft_off   &bootloader &trans
+&kp C_MUTE &trans        &trans          &trans        &trans        &trans          &mkp LCLK        &trans     &trans    &trans      &trans      &trans
             >;
 
-            display-name = "LAYER3";
+            display-name = "SYSTEM";
             sensor-bindings = <&rsr_vol &rsr_trans>;
         };
 
