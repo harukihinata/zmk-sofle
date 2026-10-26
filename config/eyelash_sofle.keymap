@@ -57,6 +57,11 @@
     combos {
         compatible = "zmk,combos";
 
+        studio_unlock_combo {
+            bindings = <&studio_unlock>;
+            key-positions = <15 29 41>;
+        };
+
         softoff {
             bindings = <&soft_off>;
             key-positions = <14 28 40>;
