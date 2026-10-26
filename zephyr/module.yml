@@ -1,5 +1,5 @@
 name: sofle_status
 build:
-  cmake: ..
+  cmake: .
   settings:
     board_root: .
