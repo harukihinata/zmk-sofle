@@ -57,8 +57,8 @@ static void draw_text(int x, int y, const char *text) {
             for (int col = 0; col < 5; ++col) {
                 for (int row = 0; row < 7 && y + row < 92; ++row) {
                     if (glyphs[g].columns[col] & BIT(row)) {
-                        /* Match the native status canvas's 270-degree rotation. */
-                        pixels[(67 - x - col) * 92 + y + row] = 0;
+                        /* The right-hand display mount needs 90 degrees for upright text. */
+                        pixels[(x + col) * 92 + (91 - y - row)] = 0;
                     }
                 }
             }
