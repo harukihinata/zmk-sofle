@@ -6,6 +6,6 @@ include:
     cmake-args: -DCONFIG_ZMK_STUDIO=y
   - board: nice_nano//zmk
     shield: eyelash_sofle_right nice_view
-    cmake-args: -DCONFIG_NICE_VIEW_WIDGET_STATUS=n -DCONFIG_LV_USE_LABEL=y -DCONFIG_LV_FONT_UNSCII_8=y
+    cmake-args: -DCONFIG_NICE_VIEW_WIDGET_STATUS=n -DCONFIG_LV_USE_IMAGE=y -DCONFIG_LV_USE_CANVAS=y -DCONFIG_LV_FONT_MONTSERRAT_16=y
   - board: nice_nano//zmk
     shield: settings_reset
