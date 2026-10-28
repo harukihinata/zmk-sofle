@@ -5,9 +5,11 @@
 #include <zephyr/kernel.h>
 #include <zephyr/sys/atomic.h>
 #include <zmk/display.h>
+#include <zmk/activity.h>
 #include <zmk/display/status_screen.h>
 #include <zmk/event_manager.h>
 #include <zmk/events/split_peripheral_status_changed.h>
+#include <zmk/events/activity_state_changed.h>
 #include <zmk/split/bluetooth/peripheral.h>
 #include "peripheral_status.h"
 
@@ -83,7 +85,22 @@ ZMK_SUBSCRIPTION(sofle_right_status, zmk_split_peripheral_status_changed);
 static void update_status(struct k_work *work);
 K_WORK_DELAYABLE_DEFINE(status_work, update_status);
 
+static int activity_listener(const zmk_event_t *eh) {
+    const struct zmk_activity_state_changed *event = as_zmk_activity_state_changed(eh);
+    if (!event || !stats_art) { return ZMK_EV_EVENT_BUBBLE; }
+    if (event->state == ZMK_ACTIVITY_ACTIVE) {
+        k_work_reschedule_for_queue(zmk_display_work_q(), &status_work, K_NO_WAIT);
+    } else {
+        k_work_cancel_delayable(&status_work);
+    }
+    return ZMK_EV_EVENT_BUBBLE;
+}
+
+ZMK_LISTENER(sofle_right_activity, activity_listener);
+ZMK_SUBSCRIPTION(sofle_right_activity, zmk_activity_state_changed);
+
 static void update_status(struct k_work *work) {
+    if (zmk_activity_get_state() != ZMK_ACTIVITY_ACTIVE) { return; }
     uint64_t minutes = k_uptime_get() / 60000;
     char text[24];
     memset(pixels, 0xff, sizeof(pixels));
@@ -97,7 +114,9 @@ static void update_status(struct k_work *work) {
     draw_text(4, 68, text);
     lv_image_cache_drop(&stats_image);
     lv_image_set_src(stats_art, &stats_image);
-    k_work_reschedule_for_queue(zmk_display_work_q(), &status_work, K_SECONDS(5));
+    if (zmk_activity_get_state() == ZMK_ACTIVITY_ACTIVE) {
+        k_work_reschedule_for_queue(zmk_display_work_q(), &status_work, K_SECONDS(5));
+    }
 }
 
 lv_obj_t *zmk_display_status_screen(void) {

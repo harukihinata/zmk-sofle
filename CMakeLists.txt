@@ -8,3 +8,8 @@ if(CONFIG_ZMK_DISPLAY AND CONFIG_ZMK_SPLIT AND NOT CONFIG_ZMK_SPLIT_ROLE_CENTRAL
     ${nice_view_widgets}/art.c)
   target_include_directories(app PRIVATE ${APPLICATION_SOURCE_DIR}/include ${nice_view_widgets})
 endif()
+
+if(CONFIG_ZMK_SPLIT_ROLE_CENTRAL AND CONFIG_ZMK_SETTINGS_RPC_STUDIO AND CONFIG_ZMK_SPLIT_RELAY_EVENT)
+  target_sources(app PRIVATE ${CMAKE_CURRENT_LIST_DIR}/src/sleep_sync.c)
+  target_include_directories(app PRIVATE ${APPLICATION_SOURCE_DIR}/include)
+endif()
