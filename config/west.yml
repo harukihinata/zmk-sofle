@@ -77,6 +77,8 @@ manifest:
     - name: zmk-feature-runtime-combo
       import: true
     - name: zmk-feature-kscan-diagnostics
+      import: true
+    - name: zmk-module-devtool
     # ---- third-party helpers still needed by this firmware ----
     - name: mario-peripheral-animation
       remote: gpeye
