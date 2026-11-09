@@ -2,13 +2,13 @@
 
 适用于照片中的全数字行、每侧五个底部按键、未安装轨迹球的 Velvet。
 右半是主控，USB Studio 请接右半。硬件矩阵保留上游的 61 个逻辑位置，
-其中三个中间鼠标按钮未安装，绑定为无操作；其余 58 个位置对应实体按键。
+其中三个中间鼠标按钮为虚拟位置，保留截图中的左/中/右键；其余 58 个位置对应实体按键。
 
 ## 主层及切层
 
-- 左底部从外向内：Ctrl、Win、Alt、EXCEL、Space。
-- 右底部从内向外：Enter、Space、SYMBOL、Backspace、Delete。
-- 右手最下方字母行：Shift、N、M、逗号、句号、斜杠。
+- 左底部从外向内：Alt、Win、Ctrl、Space、EXCEL。
+- 右底部从内向外：Enter、Space、SYMBOL、等号、Delete。
+- 右手最下方字母行：N、M、逗号、句号、斜杠、Enter。
 - 按住左 EXCEL 进入数字/导航层；按住右 SYMBOL 进入符号层。
 - 同时按住 EXCEL 和 SYMBOL 进入 SYSTEM；松开后返回。
 - 备用入口：同时按住 Q+W+E 进入 EXCEL，U+I+O 进入 SYMBOL。
@@ -16,9 +16,10 @@
 
 ## EXCEL
 
-左 QWERT 位置：Ctrl / Shift / Alt / F2 / Tab。
-左 ASDFG 位置：Home / 上 / End / PageUp / Insert。
-左 ZXCVB 位置：PageDown / 左 / 下 / 右 / F4。
+左 QWERT 位置：Home / 上 / End / F2 / Tab。
+左 ASDFG 位置：左 / 下 / 右 / F4 / Insert。
+左 ZXCVB 位置：PageUp / PageDown / Delete / 复制 / 粘贴。
+数字行保留主层数字；所有 F 区键集中在 SYSTEM。
 
 右字母区：
 
