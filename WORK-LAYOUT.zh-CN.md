@@ -20,6 +20,7 @@
 左 ASDFG 位置：左 / 下 / 右 / F4 / Insert。
 左 ZXCVB 位置：PageUp / PageDown / Delete / 复制 / 粘贴。
 数字行保留主层数字；所有 F 区键集中在 SYSTEM。
+EXCEL 层的 Caps 暂时作为 Ctrl，左 Shift 保留，便于组合方向键选择单元格。
 
 右字母区：
 
