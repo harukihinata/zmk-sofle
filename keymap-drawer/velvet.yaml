@@ -88,7 +88,7 @@ layers:
   - {t: '9', s: (}
   - {t: '-', s: _}
   - +
-  - {t: ▽, type: trans}
+  - $$mdi:apple-keyboard-control$$
   - $$mdi:arrow-left$$
   - $$mdi:arrow-down$$
   - $$mdi:arrow-right$$
