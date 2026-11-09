@@ -19,7 +19,7 @@ layers:
   - E
   - R
   - T
-  - {type: none}
+  - '&mkp RCLK'
   - Y
   - U
   - I
@@ -32,7 +32,7 @@ layers:
   - D
   - F
   - G
-  - {type: none}
+  - '&mkp MCLK'
   - H
   - J
   - K
@@ -45,43 +45,43 @@ layers:
   - C
   - V
   - B
-  - {type: none}
-  - $$mdi:apple-keyboard-shift$$
+  - '&mkp LCLK'
   - N
   - M
   - {t: ',', s: <}
   - {t: ., s: '>'}
   - {t: /, s: '?'}
-  - $$mdi:apple-keyboard-control$$
-  - LGUI
+  - {t: '$$mdi:keyboard-return$$', type: enter}
   - $$mdi:apple-keyboard-option$$
-  - EXCEL
+  - LGUI
+  - $$mdi:apple-keyboard-control$$
   - $$mdi:keyboard-space$$
+  - EXCEL
   - {t: '$$mdi:keyboard-return$$', type: enter}
   - $$mdi:keyboard-space$$
   - SYMBOL
-  - {t: '$$mdi:backspace-outline$$', type: backspace}
+  - {t: '=', s: +}
   - $$mdi:backspace-reverse$$
   EXCEL:
-  - {t: '`', s: '~'}
-  - F1
-  - F2
-  - F3
-  - F4
-  - F5
-  - F6
-  - F7
-  - F8
-  - F9
-  - F10
-  - F12
-  - Esc
-  - {t: '$$mdi:apple-keyboard-control$$', type: held alternate}
-  - {t: '$$mdi:apple-keyboard-shift$$', type: held alternate}
-  - {t: '$$mdi:apple-keyboard-option$$', type: held alternate}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: Home, type: held alternate}
+  - {t: '$$mdi:arrow-up$$', type: held alternate}
+  - {t: End, type: held alternate}
   - F2
   - $$mdi:keyboard-tab$$
-  - {type: none}
+  - {t: ▽, type: trans}
   - {t: /, s: '?'}
   - {t: '7', s: '&'}
   - {t: '8', s: '*'}
@@ -89,12 +89,12 @@ layers:
   - {t: '-', s: _}
   - +
   - {t: ▽, type: trans}
-  - Home
-  - $$mdi:arrow-up$$
-  - End
-  - PG UP
+  - $$mdi:arrow-left$$
+  - $$mdi:arrow-down$$
+  - $$mdi:arrow-right$$
+  - F4
   - INS
-  - {type: none}
+  - {t: ▽, type: trans}
   - '*'
   - {t: '4', s: $}
   - {t: '5', s: '%'}
@@ -102,12 +102,12 @@ layers:
   - {t: '=', s: +}
   - {t: '$$mdi:keyboard-return$$', type: enter}
   - {t: ▽, type: trans}
+  - PG UP
   - PG DN
-  - $$mdi:arrow-left$$
-  - $$mdi:arrow-down$$
-  - $$mdi:arrow-right$$
-  - F4
-  - {type: none}
+  - $$mdi:backspace-reverse$$
+  - Ctl+C
+  - Ctl+V
+  - {t: ▽, type: trans}
   - {t: '0', s: )}
   - {t: '1', s: '!'}
   - {t: '2', s: '@'}
@@ -117,8 +117,8 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {type: held}
   - {t: ▽, type: trans}
+  - {type: held}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -241,8 +241,8 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {type: held}
   - {t: ▽, type: trans}
+  - {type: held}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {type: held}
